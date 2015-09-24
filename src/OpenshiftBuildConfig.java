@@ -7,17 +7,13 @@ import org.apache.http.util.EntityUtils;
 
 import java.io.*;
 
-
-/**
- * Created by Carlo on 18/09/2015.
- */
 public class OpenshiftBuildConfig {
 
     private final static String consoleIpAddress = "https://194.95.174.111:8443/oapi/v1/namespaces/ciao-sti-build/buildconfigs";
     private final static String authToken = "4F7tVwyuaB4i8pBVc8gxfhGq60shwPyNBYsl2lWmfME";
     public static String doRequest() throws IOException {
 
-        String buildConfigString = readBuildConfig("resources/demo-app-buildconfig-docker.json");
+        String buildConfigString = readBuildConfig("resources/demo-app-buildconfig.json");
         System.out.println(buildConfigString);
         HttpClient client = HttpClients.createDefault();
         StringEntity se = new StringEntity(buildConfigString);
@@ -45,8 +41,6 @@ public class OpenshiftBuildConfig {
             while ((line = bf.readLine()) != null){
                 res += line;
             }
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
         }

@@ -7,16 +7,15 @@ import org.apache.http.util.EntityUtils;
 
 import java.io.*;
 
-/**
- * Created by Carlo on 23/09/2015.
- */
+
+
 public class OpenshiftImageStream {
 
     private final static String consoleIpAddress = "https://194.95.174.111:8443/oapi/v1/namespaces/ciao-sti-build/imagestreams";
     private final static String authToken = "4F7tVwyuaB4i8pBVc8gxfhGq60shwPyNBYsl2lWmfME";
 
     public static String createStream() throws IOException {
-        String buildConfigString = readBuildConfig("resources/demo-app-imagestream-docker.json");
+        String buildConfigString = readBuildConfig("resources/demo-app-imagestream.json");
         System.out.println(buildConfigString);
         HttpClient client = HttpClients.createDefault();
         StringEntity se = new StringEntity(buildConfigString);
