@@ -1,26 +1,26 @@
 import java.io.IOException;
 
-/**
- * Created by Carlo on 18/09/2015.
- */
 public class Launcher {
 
     public static void main(String[] args){
 
         System.setProperty("javax.net.ssl.trustStore", "C:\\Users\\Carlo\\Documents\\openshift-keystore");
-
+        String response;
         try {
-            String response = OpenshiftImageStream.createStream();
-            System.out.println(response);
+            response = OpenshiftImageStream.createStream();
+            System.out.println(response + "\n");
 
             Thread.sleep(5000);
 
             response = OpenshiftBuildConfig.doRequest();
+            System.out.println(response + "\n");
+
+            Thread.sleep(5000);
+
+            response = OpenshiftDeploymentConfig.writeDeployment();
             System.out.println(response);
 
-        } catch (IOException e) {
-            e.printStackTrace();
-        } catch (InterruptedException e) {
+        } catch (IOException | InterruptedException e) {
             e.printStackTrace();
         }
 

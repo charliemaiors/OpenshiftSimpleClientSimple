@@ -2,20 +2,20 @@
   "kind": "DeploymentConfig",
   "apiVersion": "v1",
   "metadata": {
-    "name": "demo"
+    "name": "sti-hello-world"
   },
   "spec": {
     "template": {
       "metadata": {
         "labels": {
-          "name": "demo"
+          "name": "sti-hello-world"
         }
       },
       "spec": {
         "containers": [
           {
-            "name": "demo-app-sti",
-            "image": "flaviomu/demo-app-sti",
+            "name": "HelloWorldDeployment",
+            "image": "172.30.67.131:5000/ciao-sti-build/output-sti-test-build",
             "ports": [
               {
                 "containerPort": 7777,
@@ -25,10 +25,10 @@
           }
         ]
       }
-    }
+    },
     "replicas": 2,
     "selector": {
-      "name": "demo"
+      "name": "sti-hello-world"
     },
     "triggers": [
       {
