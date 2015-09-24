@@ -1,0 +1,36 @@
+{
+   "kind": "BuildConfig",
+   "apiVersion": "v1",
+   "metadata": {
+      "name": "demo-app-sti-build"
+   },
+   "spec": {
+      "triggers": [
+         {
+            "type": "ConfigChange"
+         }
+      ],
+      "source": {
+         "type": "Git",
+         "git": {
+            "uri": "git://github.com/charliemaiors/demo-app-xsp.git"
+         }
+      },
+      "strategy": {
+         "type": "Source",
+         "sourceStrategy": {
+            "from": {
+               "kind": "DockerImage",
+	       "name": "flaviomu/app-builder:v1"
+            },
+	    "forcePull": true
+         }
+      },
+      "output": {
+         "to": {
+            "kind": "DockerImage",
+            "name": "172.30.67.131:5000/ciao-sti-build/output-sti-test-build"
+         }
+      }
+   }
+}

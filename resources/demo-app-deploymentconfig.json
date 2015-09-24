@@ -1,0 +1,42 @@
+{
+  "kind": "DeploymentConfig",
+  "apiVersion": "v1",
+  "metadata": {
+    "name": "demo"
+  },
+  "spec": {
+    "template": {
+      "metadata": {
+        "labels": {
+          "name": "demo"
+        }
+      },
+      "spec": {
+        "containers": [
+          {
+            "name": "demo-app-sti",
+            "image": "flaviomu/demo-app-sti",
+            "ports": [
+              {
+                "containerPort": 7777,
+                "protocol": "TCP"
+              }
+            ]
+          }
+        ]
+      }
+    }
+    "replicas": 2,
+    "selector": {
+      "name": "demo"
+    },
+    "triggers": [
+      {
+        "type": "ConfigChange"
+      }
+    ],
+    "strategy": {
+      "type": "Rolling"
+    }
+  }
+}

@@ -1,0 +1,11 @@
+{
+   "kind": "ImageStream",
+   "apiVersion": "v1",
+   "metadata": {
+      "name": "demo-app-docker"
+   },
+   "spec": {},
+   "status": {
+      "dockerImageRepository": ""
+   }
+}
