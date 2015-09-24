@@ -1,0 +1,19 @@
+{
+  "kind": "Service",
+  "apiVersion": "v1",
+  "metadata": {
+    "name": "hello-world-service"
+  },
+  "spec": {
+    "selector": {
+      "name": "sti-hello-world"
+    },
+    "ports": [
+      {
+        "protocol": "TCP",
+        "port": 7777,
+        "targetPort": 7777
+      }
+    ]
+  }
+}

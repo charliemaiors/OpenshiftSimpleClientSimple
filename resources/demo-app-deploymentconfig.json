@@ -14,7 +14,7 @@
       "spec": {
         "containers": [
           {
-            "name": "HelloWorldDeployment",
+            "name": "helloworlddeployment",
             "image": "172.30.67.131:5000/ciao-sti-build/output-sti-test-build",
             "ports": [
               {
