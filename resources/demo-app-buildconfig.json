@@ -21,7 +21,7 @@
          "sourceStrategy": {
             "from": {
                "kind": "DockerImage",
-	       "name": "flaviomu/app-builder:v1"
+	           "name": "flaviomu/app-builder:v1"
             },
 	    "forcePull": true
          }
@@ -29,7 +29,7 @@
       "output": {
          "to": {
             "kind": "DockerImage",
-            "name": "172.30.67.131:5000/ciao-sti-build/output-sti-test-build"
+            "name": "172.30.87.129:5000/nubomedia/output-sti-test-build"
          }
       }
    }

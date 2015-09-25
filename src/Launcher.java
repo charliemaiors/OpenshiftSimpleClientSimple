@@ -7,27 +7,25 @@ public class Launcher {
         System.setProperty("javax.net.ssl.trustStore", "C:\\Users\\Carlo\\Documents\\openshift-keystore");
         String response;
         try {
-//            response = OpenshiftImageStream.createStream();
-//            System.out.println(response + "\n");
-//
-//            Thread.sleep(5000);
-//
-//            response = OpenshiftBuildConfig.doRequest();
-//            System.out.println(response + "\n");
-//
-//            Thread.sleep(5000);
+            response = OpenshiftImageStream.createStream();
+            System.out.println(response + "\n");
 
-//            response = OpenshiftDeploymentConfig.writeDeployment();
-//            System.out.println(response+ "\n");
-//
-//            Thread.sleep(5000);
-//
-//            response = OpenshiftServiceConfig.defineService();
-//            System.out.println(response);
-//
-//            Thread.sleep(5000);
+            Thread.sleep(5000);
 
-            Thread.sleep(1);
+            response = OpenshiftBuildConfig.doRequest();
+            System.out.println(response + "\n");
+
+            Thread.sleep(5000);
+
+            response = OpenshiftDeploymentConfig.writeDeployment();
+            System.out.println(response+ "\n");
+
+            Thread.sleep(5000);
+
+            response = OpenshiftServiceConfig.defineService();
+            System.out.println(response);
+
+            Thread.sleep(5000);
 
             response = OpenshiftRouteConfig.mapRoute();
             System.out.println(response);

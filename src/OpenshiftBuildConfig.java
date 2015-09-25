@@ -9,8 +9,8 @@ import java.io.*;
 
 public class OpenshiftBuildConfig {
 
-    private final static String consoleIpAddress = "https://194.95.174.111:8443/oapi/v1/namespaces/ciao-sti-build/buildconfigs";
-    private final static String authToken = "4F7tVwyuaB4i8pBVc8gxfhGq60shwPyNBYsl2lWmfME";
+    private final static String consoleIpAddress = "https://80.96.122.90:8443/oapi/v1/namespaces/nubomedia/buildconfigs";
+    private final static String authToken = "0lCfgEQQRrPShWFyrSd48lnkAbUYhNwJg_qTalq6E0k";
     public static String doRequest() throws IOException {
 
         String buildConfigString = readBuildConfig("resources/demo-app-buildconfig.json");

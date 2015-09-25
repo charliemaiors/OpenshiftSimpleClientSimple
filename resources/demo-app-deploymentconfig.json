@@ -15,7 +15,7 @@
         "containers": [
           {
             "name": "helloworlddeployment",
-            "image": "172.30.67.131:5000/ciao-sti-build/output-sti-test-build",
+            "image": "172.30.87.129:5000/nubomedia/output-sti-test-build",
             "ports": [
               {
                 "containerPort": 7777,

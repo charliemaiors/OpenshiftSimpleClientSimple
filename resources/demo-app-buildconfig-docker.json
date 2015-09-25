@@ -28,7 +28,7 @@
       "output": {
          "to": {
             "kind": "DockerImage",
-            "name": "172.30.67.131:5000/ciao-sti-build/demo-app-docker"
+            "name": "172.30.87.129:5000/nubomedia/demo-app-docker"
          }
       }
    }
