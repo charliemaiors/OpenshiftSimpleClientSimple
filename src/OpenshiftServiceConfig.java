@@ -12,7 +12,7 @@ import java.io.IOException;
 
 public class OpenshiftServiceConfig {
 
-    private final static String consoleIpAddress = "https://80.96.122.90:8443/api/v1/namespaces/nubomedia/services";
+    private final static String consoleIpAddress = "https://openshift:8443/api/v1/namespaces/nubomedia/services";
     private final static String authToken = "0lCfgEQQRrPShWFyrSd48lnkAbUYhNwJg_qTalq6E0k";
 
     public static String defineService() throws IOException{
