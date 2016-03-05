@@ -11,7 +11,7 @@ import java.io.IOException;
 
 public class OpenshiftRouteConfig {
 
-    private final static String consoleIpAddress = "https://80.96.122.90:8443/oapi/v1/namespaces/nubomedia/routes";
+    private final static String consoleIpAddress = "https://openshift:8443/oapi/v1/namespaces/nubomedia/routes";
     private final static String authToken = "0lCfgEQQRrPShWFyrSd48lnkAbUYhNwJg_qTalq6E0k";
 
     public static String mapRoute() throws IOException{
